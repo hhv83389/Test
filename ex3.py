@@ -10,7 +10,10 @@ sum = 0  # 合計
 with zipfile.ZipFile(InputZipFile, "r") as zip_file:
     InputFiles = zip_file.namelist()  # zipファイル内のファイルの配列
     for InputFile in InputFiles:
-        if InputFile.endswith("_kgu.txt"):  # 「_kgu.txt」をファイル名の最後に持つファイル
+        print(InputFile)
+        if InputFile.startswith("sample/kitamura_") and InputFile.endswith(
+            "_kgu.txt"
+        ):  # 「_kgu.txt」をファイル名の最後に持つファイル
             file_number = int(InputFile.split("_")[1])  # ファイルの数値のみを抽出
             if file_number % 2 == 1:  # 奇数名のみ
                 # print(file_number)
