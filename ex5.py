@@ -29,7 +29,7 @@ canvas.create_line(X, Y + r + body, X + limb, Y + r + body + limb, tags="a")  # 
 
 # 移動関数
 def move():
-    canvas.move("a", dx, 0)  # "a"の図形をx+=5ずつ移動
+    canvas.move("a", dx, 0)  # "a"の図形をx座標方向に5ずつ移動
     canvas.after(100, move)
 
 
