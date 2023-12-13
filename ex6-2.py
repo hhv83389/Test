@@ -38,8 +38,8 @@ for i in range(2):
     Y2 = data["people"][i]["pose_keypoints_2d"][5 * 3 + 1] * t
 
     # 点の描画
-    canvas.create_oval(X1 - r, Y1 - r, X1 + r, Y1 + r, fill="black", width=0)
-    canvas.create_oval(X2 - r, Y2 - r, X2 + r, Y2 + r, fill="black", width=0)
+    canvas.create_oval(X1 - r, Y1 - r, X1 + r, Y1 + r, fill="black")
+    canvas.create_oval(X2 - r, Y2 - r, X2 + r, Y2 + r, fill="black")
     canvas.create_line(X1, Y1, X2, Y2)
 
 
